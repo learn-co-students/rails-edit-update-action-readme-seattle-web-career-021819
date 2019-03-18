@@ -1,0 +1,12 @@
+<h1>This is the '/articles/edit' view.</h1>
+
+
+<%= form_tag article_path(@article), method: "PATCH" do %>
+  <label>Edit Title:</label><br>
+  <%= text_field_tag 'article[title]', @article.title %><br><br>
+
+  <label>Edit Description:</label><br>
+  <%= text_area_tag 'article[description]', @article.description %>
+
+  <%= submit_tag "Submit Article" %>
+<% end %>
